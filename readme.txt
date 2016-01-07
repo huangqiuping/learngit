@@ -5,3 +5,4 @@ Git  tracks changes of files.
 Nick is nice.
 Creating a new branch is quick and simple.
 add merge
+add merge use fast forward mode
