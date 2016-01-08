@@ -9,3 +9,4 @@ add merge use fast forward mode
 add stash
 add reset
 push dev
+amy is here
