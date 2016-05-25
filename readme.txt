@@ -8,3 +8,4 @@ add merge
 add merge use fast forward mode
 add stash
 add reset
+This is a test.
