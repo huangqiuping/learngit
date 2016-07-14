@@ -38,6 +38,9 @@ nothing to commit, working directory clean
 git add README
 ```
 
+
+
+
 ##1、初始化 git 仓库
 ```
 git init
@@ -142,7 +145,14 @@ git checkout name
 ```
 git merge name     // 无法自动合并的时候，就需要手动解决冲突了
 ```
-###5）删除分支
+或者：
+```
+git rebase name
+```
+`merge`与`rebase`的区别在于，`merge`直接将name分支合并至master分支，后面可以清楚的看到这一动作，而`rebase`会先将name分支与master分支做比较，然后根据一定的规则
+
+
+### 5）删除分支
 ```
 git branch -d name
 ```
@@ -162,6 +172,9 @@ git stash
 ```
 修改完后，可以使用
 ```
+git stash apply
+git stash drop
+上面两条命令等价于下面一条：
 git stash pop // 恢复暂存修改
 git stats list // 查看当时暂存的 list
 ```
@@ -247,6 +260,25 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 [merge]
     tool = vimdiff
 ```
+
+## 18、github
+
+### 1. 创建一个仓库并推送
+```
+echo "# test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:huangqiuping/test.git
+git push -u origin master
+```
+
+### 2. 推送现有仓库
+```
+git remote add origin git@github.com:huangqiuping/test.git
+git push -u origin master
+```
+
 
 
 
