@@ -149,7 +149,7 @@ git merge name     // 无法自动合并的时候，就需要手动解决冲突�
 ```
 git rebase name
 ```
-`merge`与`rebase`的区别在于，`merge`直接将name分支合并至master分支，后面可以清楚的看到这一动作，而`rebase`会先将name分支与master分支做比较，然后根据一定的规则
+`merge`与`rebase`的区别在于，`merge`直接将name分支合并至master分支，后面可以清楚的知道哪一部分来自哪一分支，而`rebase`会先将name分支与master分支做比较，然后根据一定的规则进行合并，后面不清楚哪一部分是来自哪一分支。
 
 
 ### 5）删除分支
